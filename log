@@ -153,3 +153,80 @@ Fri Mar 20 02:54:17 AM UTC 2026:
  tests:  3|2
 total_score: 40/70
 c1feed4
+Fri Mar 20 03:11:14 AM UTC 2026: 
+ exercises.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:96:4: error: unknown type name ‘Pila’
+   96 |    Pila* P_aux = create_pila();
+      |    ^~~~
+exercises.c:96:18: error: implicit declaration of function ‘create_pila’; did you mean ‘create_list’? [-Wimplicit-function-declaration]
+   96 |    Pila* P_aux = create_pila();
+      |                  ^~~~~~~~~~~
+      |                  create_list
+exercises.c:96:18: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:97:18: error: comparison between pointer and integer [-Werror]
+   97 |    while(top(P1) != -1){
+      |                  ^~
+exercises.c:98:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   98 |       int elemento = top(P1);
+      |                      ^~~
+exercises.c:99:12: error: passing argument 1 of ‘push’ from incompatible pointer type [-Wincompatible-pointer-types]
+   99 |       push(P_aux, elemento);
+      |            ^~~~~
+      |            |
+      |            int *
+In file included from exercises.c:7:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+exercises.c:99:19: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+   99 |       push(P_aux, elemento);
+      |                   ^~~~~~~~
+      |                   |
+      |                   int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:102:14: error: passing argument 1 of ‘top’ from incompatible pointer type [-Wincompatible-pointer-types]
+  102 |    while(top(P_aux) != -1){
+      |              ^~~~~
+      |              |
+      |              int *
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:102:21: error: comparison between pointer and integer [-Werror]
+  102 |    while(top(P_aux) != -1){
+      |                     ^~
+exercises.c:103:26: error: passing argument 1 of ‘top’ from incompatible pointer type [-Wincompatible-pointer-types]
+  103 |       int elemento = top(P_aux);
+      |                          ^~~~~
+      |                          |
+      |                          int *
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:103:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  103 |       int elemento = top(P_aux);
+      |                      ^~~
+exercises.c:104:15: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  104 |       push(P2,elemento);
+      |               ^~~~~~~~
+      |               |
+      |               int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:105:11: error: passing argument 1 of ‘pop’ from incompatible pointer type [-Wincompatible-pointer-types]
+  105 |       pop(P_aux);
+      |           ^~~~~
+      |           |
+      |           int *
+stack.h:17:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   17 | void *pop(Stack *stack) { return popFront(stack); }
+      |           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+8a4571d
