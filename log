@@ -514,3 +514,40 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
    11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
       |                         ~~~~~~^~~~
 f2c0a72
+Fri Mar 20 05:41:59 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:98:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   98 |       int elemento = top(P1);
+      |                      ^~~
+exercises.c:99:12: error: ‘P_auxelemento’ undeclared (first use in this function); did you mean ‘elemento’?
+   99 |       push(P_auxelemento);
+      |            ^~~~~~~~~~~~~
+      |            elemento
+exercises.c:99:12: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:99:7: error: too few arguments to function ‘push’
+   99 |       push(P_auxelemento);
+      |       ^~~~
+In file included from exercises.c:7:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+exercises.c:98:11: error: unused variable ‘elemento’ [-Werror=unused-variable]
+   98 |       int elemento = top(P1);
+      |           ^~~~~~~~
+exercises.c:103:23: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  103 |       int elementos = top(P_aux);
+      |                       ^~~
+exercises.c:104:15: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  104 |       push(P2,elementos);
+      |               ^~~~~~~~~
+      |               |
+      |               int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+afc8a27
