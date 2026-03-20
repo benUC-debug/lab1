@@ -54,3 +54,14 @@ exercises.c:63:12: error: assignment to ‘int’ from ‘void *’ makes intege
    63 |       suma += elemento;
       |            ^~
 31cb764
+Fri Mar 20 02:28:06 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:60:4: error: ‘elemento’ undeclared (first use in this function)
+   60 |    elemento = first(L);
+      |    ^~~~~~~~
+exercises.c:60:4: note: each undeclared identifier is reported only once for each function it appears in
+55fbb85
