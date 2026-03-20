@@ -92,3 +92,9 @@ exercises.c:63:12: error: assignment to ‘int’ from ‘void *’ makes intege
    63 |       suma += elemento;
       |            ^~
 238e3ae
+Fri Mar 20 02:30:07 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|3
+total_score: 20/70
+ad0164b
