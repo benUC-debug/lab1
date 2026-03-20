@@ -98,3 +98,17 @@ Fri Mar 20 02:30:07 AM UTC 2026:
  tests:  2|3
 total_score: 20/70
 ad0164b
+Fri Mar 20 02:40:44 AM UTC 2026: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:82:10: error: too many arguments to function ‘popCurrent’
+   82 |          popCurrent(L,elemento);
+      |          ^~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+79dc34a
