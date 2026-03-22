@@ -94,18 +94,14 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) {
    Stack* P_aux = create_stack();
-   void *elemento;
    while(top(P1) != NULL){
-      elemento = top(P1);
-      push(P2, elemento);
-      push(P_aux,elemento);
-      elemento = pop(P1);
+      push(P_aux,top(P1));
+      pop(P1);
    }
 
-   void* elementos;
    while(top(P2) != NULL){
-      elementos = top(P2);
-      push(P2,elementos);
+      push(P2,top(P_aux));
+      push(P1, top(P_aux));
       pop(P_aux);
    }
 }
@@ -118,6 +114,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   
    return 0;
 }
 
