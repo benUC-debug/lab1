@@ -650,3 +650,14 @@ exercises.c:123:10: error: ‘candena’ undeclared (first use in this function)
       |          cadena
 exercises.c:123:10: note: each undeclared identifier is reported only once for each function it appears in
 35a2a43
+Sun Mar 22 11:11:26 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:123:20: error: comparison between pointer and integer [-Werror]
+  123 |       if(cadena[i] == NULL){
+      |                    ^~
+cc1: all warnings being treated as errors
+2c770b4
