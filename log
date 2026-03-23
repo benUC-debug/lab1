@@ -749,3 +749,14 @@ exercises.c:129:32: error: ‘tope’ undeclared (first use in this function); d
 exercises.c:129:32: note: each undeclared identifier is reported only once for each function it appears in
 cc1: all warnings being treated as errors
 5480469
+Mon Mar 23 12:04:37 AM UTC 2026: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:20: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  121 |          push(pila,(void*)(int)cadena[i]);
+      |                    ^
+cc1: all warnings being treated as errors
+2d6ce50
