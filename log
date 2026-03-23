@@ -691,3 +691,14 @@ Sun Mar 22 11:30:07 PM UTC 2026:
  tests:  7|1
 total_score: 60/70
 ee94e26
+Mon Mar 23 12:00:33 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:20: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  121 |          push(pila,(void*)cadena[i]);
+      |                    ^
+cc1: all warnings being treated as errors
+75a0d82
