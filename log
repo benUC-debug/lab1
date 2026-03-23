@@ -733,3 +733,19 @@ exercises.c:130:10: error: implicit declaration of function ‘free_stack’; di
       |          create_stack
 cc1: all warnings being treated as errors
 4981e92
+Mon Mar 23 12:03:35 AM UTC 2026: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:20: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  121 |          push(pila,(void*)(int)cadena[i]);
+      |                    ^
+exercises.c:129:32: error: ‘tope’ undeclared (first use in this function); did you mean ‘top’?
+  129 |       if( (cadena[i] == ')' && tope != '(') || (cadena[i] == '}' && tope != '{') || (cadena[i] == ']' &&          tope != '[') ){
+      |                                ^~~~
+      |                                top
+exercises.c:129:32: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+5480469
